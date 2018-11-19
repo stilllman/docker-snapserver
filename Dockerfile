@@ -9,7 +9,7 @@ FROM debian:jessie
 RUN  apt-get update \
   && apt-get install wget -y \
   && rm -rf /var/lib/apt/lists/*
-ENV  snapcast_version 0.9.0
+ENV  snapcast_version 0.10.0
 RUN  wget https://github.com/badaix/snapcast/releases/download/v${snapcast_version}/snapserver_${snapcast_version}_amd64.deb
 RUN  dpkg -i snapserver_${snapcast_version}_amd64.deb \
   ;  apt-get update \
